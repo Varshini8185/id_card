@@ -1,0 +1,195 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <script>
+        alert("hello! world")
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count_app</title>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <fieldset style="height: 250px;width: 250px; background-color: rgb(172, 234, 210);box-shadow: 5px 5px 10px;">
+        <legend><h1 style="color: rgb(55, 6, 101);background-color: rgb(189, 201, 212);">COUNT APP</h1></legend>
+    
+    <h2 id="num" style="font-size: 50px;color: rgb(44, 5, 198);">0</h2>
+    <button style="color: rgb(17, 138, 19);" onclick="increment()">Increment +</button>
+    <button style="color: rgb(216, 65, 10);" onclick="decrement()">Decrement -</button>
+    <button style="color: rgb(59, 12, 247);"onclick="reset()">Reset</button>
+    <script>
+        let num=0;
+        function increment(){
+          num+=1
+          document.getElementById("num").innerHTML=num;
+          console.log(x)
+        }
+        function decrement(){
+            num-=1
+          document.getElementById("num").innerHTML=num;
+          console.log(x)
+        }
+        
+        function reset(){
+            num=0
+          document.getElementById("num").innerHTML=num;
+          console.log(x)
+        }
+    </script>
+    </fieldset> -->
+
+<!-- <button onclick="addDiv()">click me</button>
+<script>
+function addDiv(){
+  let div1=document.createElement("div");
+  div1.style.height="120px";
+  div1.style.width="120px";
+  div1.style.color="green";
+  div1.style.border="3px solid blue";
+  document.body.append(div1)
+} 
+</script>
+ </body>
+</html>  -->
+<!-- ID Card -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ID Card Generator</title>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .id-card {
+        width: 300px;
+        height: 250px;
+        margin: 20px auto;
+        padding: 15px;
+        border: 2px solid #333;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        background-color: #f9f9f9;
+      }
+      .id-card h2 {
+        margin-top: 0;
+        font-size: 20px;
+        color: #333;
+      }
+      .id-card img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 10px 0;
+        border: 2px solid #333;
+      }
+      .id-card .details {
+        text-align: left;
+        margin-top: 10px;
+      }
+      .id-card .details p {
+        margin: 5px 0;
+        font-size: 14px;
+        color: #555;
+      }
+      .form-container {
+        margin-top: 20px;
+      }
+      .form-container input {
+        margin: 5px 0;
+        padding: 10px;
+        width: 200px;
+        font-size: 14px;
+      }
+      .form-container button {
+        padding: 10px 20px;
+        font-size: 14px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .form-container button:hover {
+        background-color: #d13c37;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="id-card" id="idCard">
+      <h2>Employee ID Card</h2>
+      <img id="photo" src="" alt="Profile" />
+      <div class="details">
+        <p><b>Name:</b> <span id="name"></span></p>
+        <p><b>Position:</b> <span id="position"></span></p>
+        <p><b>ID Number:</b> <span id="idNumber"></span></p>
+      </div>
+    </div>
+
+    <div class="form-container">
+      <input type="text" id="inputName" placeholder="Enter Name" />
+      <input type="text" id="inputPosition" placeholder="Enter Position" />
+      <input type="text" id="inputIdNumber" placeholder="Enter ID Number" />
+      <input type="text" id="inputPhotoURL" placeholder="Enter Photo URL" />
+      <button onclick="updateCard()">Generate ID Card</button>
+    </div>
+
+    <script>
+      function updateCard() {
+        const name = document.getElementById("inputName").value;
+        const position = document.getElementById("inputPosition").value;
+        const idNumber = document.getElementById("inputIdNumber").value;
+        const photoURL = document.getElementById("inputPhotoURL").value;
+
+        if (name) document.getElementById("name").innerText = name;
+        if (position) document.getElementById("position").innerText = position;
+        if (idNumber) document.getElementById("idNumber").innerText = idNumber;
+        if (photoURL) document.getElementById("photo").src = photoURL;
+      }
+    </script>
+  </body>
+</html>
+
+<!-- 24/01/2025 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn">click me</button>
+  <h1 id="otp"></h1> 
+  <script>
+    let btn=document.getElementById("btn");
+    btn.addEventListener("click",
+    function (){
+      let x=Math.random()*1000000;
+      let otp=Math.floor(x);
+      let clr;
+      if(otp<100000){
+        clr=otp+100000;
+      }else clr=otp;
+      document.body.style.backgroundColor=`#${clr}`;
+      let gen_otp=document.getElementById("otp");
+      gen_otp.innerHTML=clr
+    });
+  </script>
+</body>
+</html> -->
